@@ -16,10 +16,10 @@ draw_config:
     }
 
     rect.combo, rect.combo-separate {
-      opacity: 0.95;
-      stroke: #c9cccf;
-      stroke-width: 0.5;
-      fill: #d7eaed;
+      opacity: 1.0;
+      stroke: #000;
+      stroke-width: 1;
+      fill: #000000;
     }
     path.combo {
       stroke-dasharray: 4, 4;
@@ -27,7 +27,7 @@ draw_config:
     }
 
     rect.held, rect.combo.held {
-      fill: #ebdada;
+      fill: #444444;
     }
 
     .trans.tap, .ghost.tap {
