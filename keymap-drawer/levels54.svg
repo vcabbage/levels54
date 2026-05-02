@@ -148,7 +148,7 @@ path.combo {
 }
 
 rect.held, rect.combo.held {
-  fill: #44444;
+  fill: #444444;
 }
 
 .trans.tap, .ghost.tap {
