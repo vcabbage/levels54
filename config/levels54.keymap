@@ -53,8 +53,23 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <
                                      6  7  8  9 10 11
-                                     18 19 20 21 22 23
+                                     18 19    21 22 23 // Meta i opens KDE system quick settings.
                                      30 31 32    34 35 // Stop locking the system accidentally.
+                                     42 43 44 45 46 47
+                        48 49 50     51 52 53
+            >;
+        };
+        mtal: mod_tap_alt_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <
+                                     6  7  8  9 10 11
+                                     18 19 20 21 22 23
+                                        31 32 33 34 35 // s,h is too common for modtap.
                                      42 43 44 45 46 47
                         48 49 50     51 52 53
             >;
@@ -90,11 +105,11 @@
         base {
             display-name = "Base";
             bindings = <
-                &kp TILDE &kp N1       &kp N2       &kp N3        &kp N4         &kp N5   &kp N6 &kp N7         &kp N8           &kp N9        &kp N0         &kp GRAVE
-                &kp TAB   &kp Q        &kp W        &kp E         &kp R          &kp T    &kp Y  &kp U          &kp I            &kp O         &kp P          &kp BSPC
-                &kp LCTRL &mtm LGUI A  &mtl LALT S  &mtl LCTRL D  &mtl LSHIFT F  &kp G    &kp H  &mtr RSHIFT J  &mtr RCTRL K     &mtr RALT L   &lt MOUSE SEMI &kp SQT
-                &kp LSHFT &kp Z        &kp X        &kp C         &kp V          &kp B    &kp N  &kp M          &kp COMMA        &kp DOT       &kp FSLH       &kp ESC
-                                        &ltq MEDIA ESC  &ltq NAV SPACE  &ltq MOUSE TAB    &ltq SYM RET  &ltq NUM BACKSPACE  &ltq FUN DELETE
+                &kp TILDE &kp N1       &kp N2        &kp N3        &kp N4         &kp N5   &kp N6 &kp N7         &kp N8           &kp N9        &kp N0         &kp GRAVE
+                &kp TAB   &kp Q        &kp W         &kp E         &kp R          &kp T    &kp Y  &kp U          &kp I            &kp O         &kp P          &kp BSPC
+                &kp LCTRL &mtm LGUI A  &mtal LALT S  &mtl LCTRL D  &mtl LSHIFT F  &kp G    &kp H  &mtr RSHIFT J  &mtr RCTRL K     &mtr RALT L   &lt MOUSE SEMI &kp SQT
+                &kp LSHFT &kp Z        &kp X         &kp C         &kp V          &kp B    &kp N  &kp M          &kp COMMA        &kp DOT       &kp FSLH       &kp ESC
+                                         &ltq MEDIA ESC  &ltq NAV SPACE  &ltq MOUSE TAB    &ltq SYM RET  &ltq NUM BACKSPACE  &ltq FUN DELETE
             >;
         };
 
